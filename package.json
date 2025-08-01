@@ -1,0 +1,34 @@
+{
+  "name": "bbc-nextjs-clone",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:monitored": "node scripts/dev-with-check.js",
+    "build": "next build",
+    "build:clean": "node scripts/clean-build.js",
+    "clean-build": "node scripts/clean-build-prerender.js",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "node -e \"const fs=require('fs'); if(fs.existsSync('.next')) fs.rmSync('.next', {recursive:true, force:true}); console.log('Cleaned .next directory')\"",
+    "check-assets": "node -e \"require('./scripts/dev-with-check.js').checkServerAssets()\"",
+    "test-routes": "node scripts/test-routes.js",
+    "check-prerender": "node scripts/check-prerender-manifest.js"
+  },
+  "dependencies": {
+    "next": "^14.2.30",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
