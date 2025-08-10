@@ -5,7 +5,8 @@ const nextConfig = {
   // GitHub Pages configuration
   output: 'export',
   basePath: isProd ? '/BBC_CLONE' : '',
-  assetPrefix: isProd ? '/BBC_CLONE/' : '',
+  assetPrefix: isProd ? '/BBC_CLONE' : '',
+  
   
   // Image configuration
   images: {
