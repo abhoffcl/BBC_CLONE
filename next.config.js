@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
+  // GitHub Pages configuration
+  output: 'export',
+  basePath: isProd ? '/BBC_CLONE' : '',
+  assetPrefix: isProd ? '/BBC_CLONE/' : '',
+  
   // Image configuration
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ichef.bbci.co.uk'],
@@ -56,20 +63,8 @@ const nextConfig = {
     return config
   },
   
-  // Custom headers to handle CORS and caching
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=0, must-revalidate',
-          },
-        ],
-      },
-    ]
-  },
+  // Custom headers removed for static export compatibility
+  // Note: Custom headers don't work with static export
 }
 
 module.exports = nextConfig

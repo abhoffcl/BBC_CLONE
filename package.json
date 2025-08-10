@@ -13,7 +13,8 @@
     "clean": "node -e \"const fs=require('fs'); if(fs.existsSync('.next')) fs.rmSync('.next', {recursive:true, force:true}); console.log('Cleaned .next directory')\"",
     "check-assets": "node -e \"require('./scripts/dev-with-check.js').checkServerAssets()\"",
     "test-routes": "node scripts/test-routes.js",
-    "check-prerender": "node scripts/check-prerender-manifest.js"
+    "check-prerender": "node scripts/check-prerender-manifest.js",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "next": "^14.2.30",
@@ -27,6 +28,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
+    "gh-pages": "^6.3.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
