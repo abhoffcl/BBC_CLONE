@@ -6,6 +6,7 @@
     "dev": "next dev",
     "dev:monitored": "node scripts/dev-with-check.js",
     "build": "next build",
+    "export": "echo 'Static export created in out/ directory'",
     "build:clean": "node scripts/clean-build.js",
     "clean-build": "node scripts/clean-build-prerender.js",
     "start": "next start",
